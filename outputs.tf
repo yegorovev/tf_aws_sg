@@ -1,10 +1,9 @@
-# TODO Maybe or not concatenate all outputs
-output "sg_id" {
-  description = "ID security group"
-  value       = aws_security_group.sg.id
+output "sg" {
+  description = "Security groups"
+  value       = aws_security_group.sg
 }
 
-output "sgr_id" {
-  description = "ID security group rule"
-  value       = aws_security_group_rule.rules[*].id
+output "sg_rules" {
+  description = "Security group rules"
+  value       = aws_security_group_rule.rules[*]
 }
