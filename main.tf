@@ -1,6 +1,7 @@
 resource "aws_security_group" "sg" {
-  name   = var.sg_name
-  vpc_id = var.vpc_id
+  name        = var.sg_name
+  vpc_id      = var.vpc_id
+  description = var.sg_description
 }
 
 resource "aws_security_group_rule" "rules" {

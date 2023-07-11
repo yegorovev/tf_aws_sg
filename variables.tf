@@ -5,9 +5,14 @@ variable "vpc_id" {
 }
 
 variable "sg_name" {
-  description = "Name for security group"
+  description = "Security group name"
   nullable    = false
-  default     = ""
+  default     = "SG"
+}
+
+variable "sg_description" {
+  description = "Security group description"
+  default     = "Custom SG"
 }
 
 variable "rules" {
